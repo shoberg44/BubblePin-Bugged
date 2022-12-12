@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Atc-M7-qNS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Atc-M7-qNS">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -115,6 +115,7 @@
                                             <outlet property="pinIcon" destination="Fot-lH-fQZ" id="gRb-wD-EVo"/>
                                             <outlet property="titleLabel" destination="iyA-qB-SMu" id="wDg-c9-5RX"/>
                                             <outlet property="typeLabel" destination="GVh-ga-oU9" id="7Zw-5z-T0O"/>
+                                            <segue destination="ODG-yu-Pml" kind="show" identifier="infoSeque" id="0zc-Dx-BQF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -145,20 +146,43 @@
             </objects>
             <point key="canvasLocation" x="990.76923076923072" y="-136.49289099526067"/>
         </scene>
-        <!--View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="Qv6-oS-Hsg">
             <objects>
-                <viewController id="ODG-yu-Pml" sceneMemberID="viewController">
+                <viewController id="ODG-yu-Pml" customClass="NoteViewController" customModule="BubblePin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p2o-0I-haF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9k-X3-M0L">
+                                <rect key="frame" x="0.0" y="81" width="390" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="hehehehhehe" translatesAutoresizingMaskIntoConstraints="NO" id="95k-dw-d5N">
+                                <rect key="frame" x="16" y="132" width="358" height="463"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o9M-Ni-KfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h3M-K2-KbM"/>
+                    <connections>
+                        <outlet property="textField" destination="95k-dw-d5N" id="UYC-k3-kd2"/>
+                        <outlet property="titleLabel" destination="i9k-X3-M0L" id="yRR-68-A2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGL-Ze-ezc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="-144"/>
+            <point key="canvasLocation" x="1773.8461538461538" y="-144.31279620853081"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HGt-Y3-Hu6">
@@ -182,8 +206,14 @@
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="pin.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
