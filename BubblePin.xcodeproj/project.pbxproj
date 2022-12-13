@@ -22,6 +22,7 @@
 		E6B273462938E3CD00155363 /* BubblePinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273452938E3CD00155363 /* BubblePinUITests.swift */; };
 		E6B273482938E3CD00155363 /* BubblePinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273472938E3CD00155363 /* BubblePinUITestsLaunchTests.swift */; };
 		E6FE41502948B81C00317465 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE414F2948B81C00317465 /* PasswordViewController.swift */; };
+		E6FE41542948BC4400317465 /* GeneralNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE41532948BC4400317465 /* GeneralNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E6B273452938E3CD00155363 /* BubblePinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePinUITests.swift; sourceTree = "<group>"; };
 		E6B273472938E3CD00155363 /* BubblePinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePinUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6FE414F2948B81C00317465 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		E6FE41532948BC4400317465 /* GeneralNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				E61379B92947746E00EC724B /* NoteViewController.swift */,
 				E6236C7B2940D1AC00B8C7D5 /* NewNoteViewController.swift */,
 				E63AEF0B293F7E1A009E458E /* Item.swift */,
+				E6FE41532948BC4400317465 /* GeneralNote.swift */,
 				E6B2732D2938E3CD00155363 /* Assets.xcassets */,
 				E6B2732F2938E3CD00155363 /* LaunchScreen.storyboard */,
 				E6B273322938E3CD00155363 /* Info.plist */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6FE41542948BC4400317465 /* GeneralNote.swift in Sources */,
 				E61379BA2947746E00EC724B /* NoteViewController.swift in Sources */,
 				E6FE41502948B81C00317465 /* PasswordViewController.swift in Sources */,
 				E62542522938E94D00CBB6F3 /* CellClass.swift in Sources */,

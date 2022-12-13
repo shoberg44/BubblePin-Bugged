@@ -47,6 +47,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.selectedRow = indexPath.row
+        //if AppData.noteList[AppData.selectedRow]
+        if let AppData.noteList[AppData.selectedRow] = obj as? GeneralNote {
+           print("is type")
+        }
+        else {
+            print("is not")
+        }
         //performSegue(withIdentifier: "infoSeque", sender: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
