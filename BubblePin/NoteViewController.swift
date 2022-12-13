@@ -13,8 +13,12 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = AppData.noteList[AppData.selectedRow].name
+        textField.text = AppData.noteList[AppData.selectedRow].text
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppData.noteList[AppData.selectedRow].text = textField.text
+    }
 
     /*
     // MARK: - Navigation

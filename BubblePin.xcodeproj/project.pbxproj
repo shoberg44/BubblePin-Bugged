@@ -10,7 +10,6 @@
 		E61379BA2947746E00EC724B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61379B92947746E00EC724B /* NoteViewController.swift */; };
 		E6236C7C2940D1AC00B8C7D5 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6236C7B2940D1AC00B8C7D5 /* NewNoteViewController.swift */; };
 		E62542522938E94D00CBB6F3 /* CellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62542512938E94D00CBB6F3 /* CellClass.swift */; };
-		E62BBB49294776EC00C2AFD6 /* GeneralNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62BBB48294776EC00C2AFD6 /* GeneralNote.swift */; };
 		E63AEF0C293F7E1A009E458E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEF0B293F7E1A009E458E /* Item.swift */; };
 		E6B273222938E3CD00155363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273212938E3CD00155363 /* AppDelegate.swift */; };
 		E6B273242938E3CD00155363 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273232938E3CD00155363 /* SceneDelegate.swift */; };
@@ -22,6 +21,7 @@
 		E6B2733C2938E3CD00155363 /* BubblePinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B2733B2938E3CD00155363 /* BubblePinTests.swift */; };
 		E6B273462938E3CD00155363 /* BubblePinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273452938E3CD00155363 /* BubblePinUITests.swift */; };
 		E6B273482938E3CD00155363 /* BubblePinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B273472938E3CD00155363 /* BubblePinUITestsLaunchTests.swift */; };
+		E6FE41502948B81C00317465 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FE414F2948B81C00317465 /* PasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		E61379B92947746E00EC724B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		E6236C7B2940D1AC00B8C7D5 /* NewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		E62542512938E94D00CBB6F3 /* CellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellClass.swift; sourceTree = "<group>"; };
-		E62BBB48294776EC00C2AFD6 /* GeneralNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNote.swift; sourceTree = "<group>"; };
 		E63AEF0B293F7E1A009E458E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E6B2731E2938E3CD00155363 /* BubblePin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubblePin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B273212938E3CD00155363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		E6B273412938E3CD00155363 /* BubblePinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubblePinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B273452938E3CD00155363 /* BubblePinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePinUITests.swift; sourceTree = "<group>"; };
 		E6B273472938E3CD00155363 /* BubblePinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblePinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6FE414F2948B81C00317465 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +116,10 @@
 				E6B273232938E3CD00155363 /* SceneDelegate.swift */,
 				E6B273252938E3CD00155363 /* ViewController.swift */,
 				E6B273272938E3CD00155363 /* Main.storyboard */,
+				E6FE414F2948B81C00317465 /* PasswordViewController.swift */,
 				E61379B92947746E00EC724B /* NoteViewController.swift */,
 				E6236C7B2940D1AC00B8C7D5 /* NewNoteViewController.swift */,
 				E63AEF0B293F7E1A009E458E /* Item.swift */,
-				E62BBB48294776EC00C2AFD6 /* GeneralNote.swift */,
 				E6B2732D2938E3CD00155363 /* Assets.xcassets */,
 				E6B2732F2938E3CD00155363 /* LaunchScreen.storyboard */,
 				E6B273322938E3CD00155363 /* Info.plist */,
@@ -277,12 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61379BA2947746E00EC724B /* NoteViewController.swift in Sources */,
+				E6FE41502948B81C00317465 /* PasswordViewController.swift in Sources */,
 				E62542522938E94D00CBB6F3 /* CellClass.swift in Sources */,
 				E6B273262938E3CD00155363 /* ViewController.swift in Sources */,
 				E6236C7C2940D1AC00B8C7D5 /* NewNoteViewController.swift in Sources */,
 				E6B2732C2938E3CD00155363 /* BubblePin.xcdatamodeld in Sources */,
 				E6B273222938E3CD00155363 /* AppDelegate.swift in Sources */,
-				E62BBB49294776EC00C2AFD6 /* GeneralNote.swift in Sources */,
 				E63AEF0C293F7E1A009E458E /* Item.swift in Sources */,
 				E6B273242938E3CD00155363 /* SceneDelegate.swift in Sources */,
 			);
