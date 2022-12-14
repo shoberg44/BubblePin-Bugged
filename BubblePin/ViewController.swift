@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         //AppData.noteList.append(Item(name: "Test Name", type: .general, favorite: false, id: 1))
-        AppData.noteList.append(Item(name: "Numbers", type: AppData.itemType.general, favorite: false, id: 3))
+        AppData.noteList.append(GeneralNote(name: "ahh", type: AppData.itemType.general, favorite: false, id: 2, text: "why isn't this working?"))
         
     }
     
@@ -48,13 +48,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AppData.selectedRow = indexPath.row
         //if AppData.noteList[AppData.selectedRow]
-        if let AppData.noteList[AppData.selectedRow] = obj as? GeneralNote {
-           print("is type")
+        if AppData.noteList[AppData.selectedRow].type == AppData.itemType.general {
+            performSegue(withIdentifier: "generalSegue", sender: Any?.self)
         }
         else {
-            print("is not")
+            // obj is not a string array
+            print("not array")
         }
-        //performSegue(withIdentifier: "infoSeque", sender: nil)
+            //performSegue(withIdentifier: "generalSegue", sender: Any?.self)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

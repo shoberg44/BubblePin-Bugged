@@ -13,11 +13,19 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = AppData.noteList[AppData.selectedRow].name
-        textField.text = AppData.noteList[AppData.selectedRow].text
+        let temp = AppData.noteList[AppData.selectedRow]
+        if let t = temp as? GeneralNote{
+            textField.text = t.text
+        }
+        else{
+            textField.text = "Couldn't convert"
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AppData.noteList[AppData.selectedRow].text = textField.text
+        var temp = AppData.noteList[AppData.selectedRow] as! GeneralNote
+        temp.text = textField.text
+        AppData.noteList[AppData.selectedRow] = temp
     }
 
     /*
