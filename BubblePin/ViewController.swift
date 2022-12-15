@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         //AppData.noteList.append(Item(name: "Test Name", type: .general, favorite: false, id: 1))
-        AppData.noteList.append(GeneralNote(name: "ahh", type: AppData.itemType.general, favorite: false, id: 2, text: "why isn't this working?"))
+        //AppData.noteList.append(GeneralNote(name: "ahh", type: AppData.itemType.general, favorite: false, id: 2, text: "why isn't this working?"))
         
     }
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if AppData.noteList[AppData.selectedRow].type == AppData.itemType.general {
             performSegue(withIdentifier: "generalSegue", sender: Any?.self)
         }
-        else {
+        else { //detects password note
             /*
              if AppData.noteList[AppData.selectedRow].type == AppData.itemType.password {
                 performSegue(withIdentifier: "passwordSegue", sender: Any?.self)
@@ -62,6 +62,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        tableViewOutlet.reloadData()
+    }
+    
+    @IBAction func sort(_ sender: UIBarButtonItem) { //puts pinned/favoretting item on top
+        for i in 0..<AppData.noteList.count{
+            if AppData.noteList[i].favorite == true{
+                AppData.noteList.insert(AppData.noteList.remove(at: i), at: 0)
+            }
+        }
         tableViewOutlet.reloadData()
     }
     

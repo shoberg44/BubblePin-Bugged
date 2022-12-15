@@ -10,7 +10,7 @@ class Item{
     var name : String
     var type : AppData.itemType //naming covention is weird sorry
     var favorite : Bool
-    var id : Int
+    var id : Int //shut up meg 🥳
     init(name: String,type: AppData.itemType, favorite: Bool, id: Int) {
         self.name = name
         self.type = type

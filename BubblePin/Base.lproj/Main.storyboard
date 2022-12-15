@@ -135,7 +135,11 @@
                                 <segue destination="FnY-ou-t8Q" kind="show" id="SaQ-nq-hFN"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="dD5-PK-g87"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="dD5-PK-g87">
+                            <connections>
+                                <action selector="sort:" destination="BYZ-38-t0r" id="N8o-2o-emc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewOutlet" destination="Mii-mi-BV0" id="r8I-8y-1El"/>
@@ -183,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGL-Ze-ezc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="-741.46919431279616"/>
+            <point key="canvasLocation" x="2635" y="-604"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HGt-Y3-Hu6">
@@ -244,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pu-ml-x64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="-92.417061611374407"/>
+            <point key="canvasLocation" x="2745" y="37"/>
         </scene>
     </scenes>
     <resources>
