@@ -52,8 +52,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             performSegue(withIdentifier: "generalSegue", sender: Any?.self)
         }
         else {
-            // obj is not a string array
-            print("not array")
+            if AppData.noteList[AppData.selectedRow].type == AppData.itemType.general {
+                performSegue(withIdentifier: "passwordSegue", sender: Any?.self)
+            }
         }
             //performSegue(withIdentifier: "generalSegue", sender: Any?.self)
     }

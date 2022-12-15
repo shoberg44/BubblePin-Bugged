@@ -38,9 +38,13 @@ class NewNoteViewController: UIViewController {
         if (nameInput.text == "" ){
             return
         }
-        else{
-            AppData.noteList.append(Item(name: nameInput.text!, type: type, favorite: isFav, id: 0))
+        else if type == .general{
+            AppData.noteList.append(GeneralNote(name: nameInput.text!, type: type, favorite: isFav, id: 0, text: ""))
             print(AppData.noteList[AppData.noteList.count-1].name)
+        }
+        else if type == .password{
+            AppData.noteList.append(Item(name: nameInput.text!, type: type, favorite: isFav, id: 0))
+            print("password")
         }
         resetInputs()
     }
