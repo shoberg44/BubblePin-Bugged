@@ -52,9 +52,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             performSegue(withIdentifier: "generalSegue", sender: Any?.self)
         }
         else {
-            if AppData.noteList[AppData.selectedRow].type == AppData.itemType.general {
+            /*
+             if AppData.noteList[AppData.selectedRow].type == AppData.itemType.password {
                 performSegue(withIdentifier: "passwordSegue", sender: Any?.self)
             }
+             */
         }
             //performSegue(withIdentifier: "generalSegue", sender: Any?.self)
     }
